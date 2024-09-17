@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra pequeña historia de amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-image: url('Wallpaper.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 182, 193, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Botón 1: Mi Girl 👸🏻 */
+        .btn-girl {
+            background-color: #ffb6c1;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+        }
+        .btn-girl:hover {
+            background-color: #ff85a1;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.6);
+        }
+
+        /* Botón 2: Playa y Salidas 💏 */
+        .btn-playa {
+            background-color: #f4978e;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(244, 151, 142, 0.4);
+        }
+        .btn-playa:hover {
+            background-color: #f08a8a;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(240, 138, 138, 0.6);
+        }
+
+        /* Botón 3: Tú y Yo ❤️ */
+        .btn-nosotros {
+            background-color: #e57373;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(229, 115, 115, 0.4);
+        }
+        .btn-nosotros:hover {
+            background-color: #d32f2f;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.6);
+        }
+
+        /* Botón 4: Nuestros Campeones 👑 */
+        .btn-campeones {
+            background-color: #ffd54f;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 213, 79, 0.4);
+        }
+        .btn-campeones:hover {
+            background-color: #ffca28;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 202, 40, 0.6);
+        }
+
+        /* Botón de Volver al Menú */
+        .volverMenu {
+            display: block;
+            background-color: #90caf9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            text-align: center;
+            margin: 20px auto;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            bottom: 20px;
+            z-index: 100;
+        }
+        .volverMenu:hover {
+            background-color: #64b5f6;
+            transform: scale(1.05);
+        }
+
+        /* Estilo para cada sección de contenido */
+        .momento-contenido {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .content img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .text {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nuestra pequeña historia de amor</h1>
+    </header>
+    <main>
+        <p class="intro-text">Klk mi bro</p>
+        <div id="menuPrincipal" class="buttons">
+            <a href="#" class="btn-girl" data-momento="1">Mi girl 👸🏻</a>
+            <a href="#" class="btn-playa" data-momento="2">Playa y salidas 💏</a>
+            <a href="#" class="btn-nosotros" data-momento="3">Tú y yo ❤️</a>
+            <a href="#" class="btn-campeones" data-momento="4">Nuestros campeones 👑</a>
+        </div>
+
+        <div id="contenido">
+            <!-- Contenido del Botón 1 -->
+            <div id="momento1" class="momento-contenido">
+                <h1>Mi girl 👸🏻</h1>
+                <p>Es imposible poder describir lo increíble y hermosa que eres, pero gracias por permitirme conocerte y por ser tú misma...</p>
+                <div class="content">
+                    <img src="ella1.jpeg" alt="Ella imagen 1">
+                    <div class="text">
+                        <p>Aquí puedes contar cómo te sientes, poner más texto e incluir fotos que te recuerden momentos especiales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido del Botón 2 -->
+            <div id="momento2" class="momento-contenido">
+                <h1>Playa y salidas 💏</h1>
+                <p>Nuestras escapadas a la playa siempre han sido momentos mágicos, llenos de risas y amor.</p>
+                <div class="content">
+                    <img src="playa.jpeg" alt="Playa imagen">
+                    <div class="text">
+                        <p>Escribe tus recuerdos favoritos de las salidas a la playa y otros lugares.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido del Botón 3 -->
+            <div id="momento3" class="momento-contenido">
+                <h1>Tú y yo ❤️</h1>
+                <p>Solo tú y yo, siempre ha sido así y siempre lo será. Nuestros momentos juntos son los más preciados.</p>
+                <div class="content">
+                    <img src="tu_yo.jpeg" alt="Tú y yo imagen">
+                    <div class="text">
+                        <p>Comparte aquí los momentos más íntimos, lo que más te hace feliz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido del Botón 4 -->
+            <div id="momento4" class="momento-contenido">
+                <h1>Nuestros campeones 👑</h1>
+                <p>Nuestras mascotas o campeones, siempre nos han llenado de alegría y cariño.</p>
+                <div class="content">
+                    <img src="campeones.jpeg" alt="Campeones imagen">
+                    <div class="text">
+                        <p>Cuenta aquí sus historias y lo importantes que son para ti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="volverMenu">Volver al Menú Principal</a>
+    </main>
+    <footer>
+        <p>Hecho con amor por tu novio 🥰 J.D</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuPrincipal = document.getElementById('menuPrincipal');
+            const contenido = document.getElementById('contenido');
+            const momentos = document.querySelectorAll('.momento-contenido');
+            const volverMenu = document.querySelector('.volverMenu');
+
+            menuPrincipal.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    e.preventDefault();
+                    const momento = e.target.getAttribute('data-momento');
+                    mostrarMomento(momento);
+                }
+            });
+
+            volverMenu.addEventListener('click', volverAlMenu);
+
+            function mostrarMomento(momento) {
+                menuPrincipal.style.display = 'none';
+                contenido.style.display = 'block';
+                momentos.forEach(m => m.style.display = 'none');
+                document.getElementById('momento' + momento).style.display = 'block';
+            }
+
+            function volverAlMenu() {
+                menuPrincipal.style.display = 'flex';
+                contenido.style.display = 'none';
+                momentos.forEach(m => m.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+</html>
